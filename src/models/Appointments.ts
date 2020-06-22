@@ -14,4 +14,4 @@ class Appointment {
     } 
 }
 
-export default appointment;
+export default Appointment;

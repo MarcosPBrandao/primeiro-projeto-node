@@ -1,6 +1,5 @@
-import Appointment from '../models/appointment';
+import Appointment from '../models/Appointments';
 import appointmentsRouter from '../routes/appointments.routes';
-import appointment from '../models/appointment';
 import { isEqual } from 'date-fns';
 interface CreateAppointmentDTD {
     provider: string;
@@ -13,7 +12,7 @@ class AppointmentsRepository {
         this.appointments = [];
     }
 
-    public findByDate(date: Date): appointment | null {
+    public findByDate(date: Date): Appointment | null {
         const findAppointment = this.appointments.find(appointment => 
             isEqual(date, appointment.date),
         )
